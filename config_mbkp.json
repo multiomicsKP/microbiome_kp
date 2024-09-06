@@ -47,22 +47,6 @@
     "publication": {
       "attribute_type_id": "???",    # a CURIE for the paper, can be PMID, PMC, doi
       "value_type_id": "???"
-    },
-    "child": {
-      "attribute_type_id": "child",
-      "value_type_id": "metatype:Boolean"
-    },
-    "adult": {
-      "attribute_type_id": "adult",
-      "value_type_id": "metatype:Boolean"
-    },
-    "older_adult": {
-      "attribute_type_id": "older_adult",
-      "value_type_id": "metatype:Boolean"
-    },
-    "tested_intervention": {
-      "attribute_type_id": "biolink:clinical_trial_tested_intervention",
-      "value_type_id": "metatype:String"
     }
   },
   "sources_template": {
