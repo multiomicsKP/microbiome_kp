@@ -1,6 +1,6 @@
 {
   "nodes_file": "https://db.systemsbiology.net/gestalt/KG/Microbiome_KG_nodes_v0.1.1.tsv",
-  "edges_file": "https://db.systemsbiology.net/gestalt/KG/icrobiome_KG_edges_p0.1.1.tsv.gz",
+  "edges_file": "https://db.systemsbiology.net/gestalt/KG/Microbiome_KG_edges_p0.1.1.tsv.gz",
   "biolink_version": "4.2.1",
   "kp_infores_curie": "infores:multiomics-microbiome",
   "endpoint_name": "mbkp",
@@ -37,7 +37,7 @@
       "value_type_id": "metatype:Integer"
     },
     "p": {
-      "attribute_type_id": "NCIT:C61594",   # Bonferroni pvalue ... not always Bonferroni though!
+      "attribute_type_id": "biolink:adjusted_p_value",
       "value_type_id": "metatype:Float"
     },
     "relationship_type": {           # the analytical method used to compute, could be "linear_regression", "spearman_correlation", "two_sided_wald_test", several others
