@@ -1,0 +1,76 @@
+{
+  "nodes_file": "https://db.systemsbiology.net/gestalt/KG/Microbiome_KG_nodes_v0.1.1.tsv",
+  "edges_file": "https://db.systemsbiology.net/gestalt/KG/icrobiome_KG_edges_p0.1.1.tsv.gz",
+  "biolink_version": "4.2.1",
+  "kp_infores_curie": "infores:multiomics-microbiome",
+  "endpoint_name": "mbkp",
+  "labels": {
+    "edges": "predicate",
+    "nodes": "category"
+  },
+  "remote_subclass_edges_file_url": "https://kg2webhost.rtx.ai/kg2.10.0pre_subclass_edges_manual_agent.jsonl.gz",
+  "subclass_sources": ["infores:mondo", "infores:chebi", "infores:hpo", "infores:ncit"],
+  "num_edges_per_answer_cutoff": 100000,
+  "normalize": false,
+  "convert_input_ids": true,
+  "drug_chemical_conflation": false,
+  "biolink_helper_branch": "master",
+  "ignore_edge_properties": ["p_correction_method", "author_year", "table_url", "sheet_name", "yaml_curator_and_organization"],
+  "other_array_properties": ["source_record_urls"],
+  "trapi_attribute_map": {
+    "knowledge_level": {
+      "attribute_type_id": "biolink:knowledge_level",
+      "attribute_source": "{kp_infores_curie}"
+    },
+    "agent_type": {
+      "attribute_type_id": "biolink:agent_type",
+      "attribute_source": "{kp_infores_curie}"
+    },
+    "relationship_strength": {
+      "attribute_type_id": "STATO:0000085", # Effect size estimate, http://purl.obolibrary.org/obo/STATO_0000085
+      "attribute_source": "{kp_infores_curie}",
+      "value_type_id": "metatype:Float"
+    },
+    "n": {
+      "attribute_type_id": "GECKO:0000106", # Sample size, http://purl.obolibrary.org/obo/GECKO_0000106
+      "attribute_source": "{kp_infores_curie}",
+      "value_type_id": "metatype:Integer"
+    },
+    "p": {
+      "attribute_type_id": "NCIT:C61594",   # Bonferroni pvalue ... not always Bonferroni though!
+      "value_type_id": "metatype:Float"
+    },
+    "relationship_type": {           # the analytical method used to compute, could be "linear_regression", "spearman_correlation", "two_sided_wald_test", several others
+      "attribute_type_id": "???",
+      "value_type_id": "???"
+    },
+    "publication": {
+      "attribute_type_id": "???",    # a CURIE for the paper, can be PMID, PMC, doi
+      "value_type_id": "???"
+    },
+    "child": {
+      "attribute_type_id": "child",
+      "value_type_id": "metatype:Boolean"
+    },
+    "adult": {
+      "attribute_type_id": "adult",
+      "value_type_id": "metatype:Boolean"
+    },
+    "older_adult": {
+      "attribute_type_id": "older_adult",
+      "value_type_id": "metatype:Boolean"
+    },
+    "tested_intervention": {
+      "attribute_type_id": "biolink:clinical_trial_tested_intervention",
+      "value_type_id": "metatype:String"
+    }
+  },
+  "sources_template": {
+    "default": [
+      {
+        "resource_id":  "{kp_infores_curie}",
+        "resource_role":  "aggregator_knowledge_source"
+      }
+    ]
+  }
+}
