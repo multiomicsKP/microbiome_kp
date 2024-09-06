@@ -45,9 +45,9 @@
       "value_type_id": "???"
     },
     "publication": {
-      "attribute_type_id": "???",    # a CURIE for the paper, can be PMID, PMC, doi
-      "value_type_id": "???"
-    }
+      "attribute_type_id": "biolink:publications",
+      "value_type_id": "biolink:Uriorcurie"
+    },
   },
   "sources_template": {
     "default": [
