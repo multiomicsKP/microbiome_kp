@@ -41,8 +41,8 @@
       "value_type_id": "metatype:Float"
     },
     "relationship_type": {           # the analytical method used to compute, could be "linear_regression", "spearman_correlation", "two_sided_wald_test", several others
-      "attribute_type_id": "???",
-      "value_type_id": "???"
+      "attribute_type_id": "AFR_0000895",   # analytical method, http://purl.allotrope.org/ontologies/result#AFR_0000895
+      "value_type_id": "metatype:String"
     },
     "publication": {
       "attribute_type_id": "biolink:publications",
@@ -54,6 +54,10 @@
       {
         "resource_id":  "{kp_infores_curie}",
         "resource_role":  "aggregator_knowledge_source"
+      },
+      {
+        "resource_id":  "infores:pubmed-central",
+        "resource_role":  "primary_knowledge_source"
       }
     ]
   }
